@@ -1,0 +1,36 @@
+form
+{
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container
+{
+    border: 50%;
+    background-color: brown;
+    width: 50%;
+}
+
+.region-list
+{
+    background-color: rgb(167, 119, 167);
+    width: 98.5%;
+    text-align: left;
+    border: 15px;
+    padding: 5px;
+    margin: 0%;
+}
+
+a
+{
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(128, 0, 6);
+    text-decoration: none;
+  }

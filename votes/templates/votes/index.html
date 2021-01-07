@@ -1,0 +1,10 @@
+<form action="." method="post" >
+    {% csrf_token %}
+    <h2>add region here </h2>
+    name : <input type="text" name="name"><br>
+
+    <button type="submit">Login</button><br>
+
+</form>
+
+    <a href="{% url 'votes:logout' %}">logout</a>

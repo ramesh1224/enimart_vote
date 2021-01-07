@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link href="{% static 'region.css' %}" rel="stylesheet">
+</head>
+<body>
+{% if admin %}
+<h1>Hello admin {{user.username}}</h1>
+<h2>Add New Region</h2>
+<div class="container">
+    <form action="" method="post" >
+        {% csrf_token %}
+        <div>
+            <label for="region-name">name </label>
+         <input id="region-name" type="text" name="name">
+        <button type="submit">add new region</button><br>
+        </div>
+    </form>
+    {% endif %}
+    </body>
+    {% for region in form %}
+    <div class="region-list">
+        <br>
+        <a href="/regions/{{region.id}}/">{{ region.name }}</a>
+        {% endfor %}
+    </div><br><br>
+    <div class="log">
+        <button>
+            <a href="{% url 'votes:logout' %}">logout</a>
+        </button>
+    </div>
+</div>
+</html>

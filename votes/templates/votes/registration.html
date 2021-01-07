@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        {% load static %}
+    <link href="{% static 'registration.css' %}" rel="stylesheet">
+</head>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">User Registration Form</h5>
+                <form action="." method="post" >
+                    {% csrf_token %}
+                    User Name : <input type="text" name="username"><br>
+                    Password : <input type="password" name="password"><br>
+                    email : <input type="text" name="email"><br>
+                    name : <input type="text" name="name"><br>
+                    address : <input type="text" name="address"><br>
+                    <input type="submit" value="Register"/><br>
+                    <a href="{% url 'votes:login' %}">Login</a>
+
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<a href = "{% url 'votes:login' %}">Login</a><br>
+
+
